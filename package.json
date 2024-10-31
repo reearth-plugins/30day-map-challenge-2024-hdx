@@ -1,22 +1,23 @@
 {
-  "name": "reearth-visualizer-plugin-shadcn-template",
+  "name": "30day-map-challenge-2024-hdx",
   "version": "0.0.1",
   "type": "module",
   "engines": {
     "node": ">=20.11.0"
   },
   "scripts": {
-    "dev:demo:main": "cross-env EXTENSION_NAME=demo UI_NAME=main vite -c configs/ui.ts",
-    "build:demo:main": "cross-env EXTENSION_NAME=demo UI_NAME=main vite build -c configs/ui.ts",
-    "build:demo:extension": "cross-env EXTENSION_NAME=demo vite build -c configs/extension.ts",
-    "build:demo": "run-s build:demo:main build:demo:extension",
-    "build": "run-s build:demo zip",
+    "dev:diseaseoutbreaks:main": "cross-env EXTENSION_NAME=diseaseoutbreaks UI_NAME=main vite -c configs/ui.ts",
+    "build:diseaseoutbreaks:main": "cross-env EXTENSION_NAME=diseaseoutbreaks UI_NAME=main vite build -c configs/ui.ts",
+    "build:diseaseoutbreaks:extension": "cross-env EXTENSION_NAME=diseaseoutbreaks vite build -c configs/extension.ts",
+    "build:diseaseoutbreaks": "run-s build:diseaseoutbreaks:main build:diseaseoutbreaks:extension",
+    "build": "run-s build:diseaseoutbreaks zip",
     "preview": "vite preview --port 5005 --strict-port",
     "zip": "node ./scripts/zip.mjs",
     "lint": "eslint .",
     "fix": "eslint --fix .",
     "format": "prettier --write .",
-    "dev-build": "concurrently 'yarn dev:demo:main' 'yarn build:demo:main --watch' 'yarn build:demo:extension --watch' 'vite preview --port 5005 --strict-port'"
+    "dev-build": "concurrently 'yarn dev:diseaseoutbreaks:main' 'yarn build:diseaseoutbreaks:main --watch' 'yarn build:diseaseoutbreaks:extension --watch' 'vite preview --port 5005 --strict-port'",
+    "data": "node ./scripts/data.mjs"
   },
   "dependencies": {
     "@radix-ui/react-icons": "1.3.0",
@@ -25,7 +26,8 @@
     "@radix-ui/react-slot": "1.1.0",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
-    "lucide-react": "0.400.0",
+    "lucide-react": "^0.454.0",
+    "recharts": "^2.13.2",
     "tailwind-merge": "2.3.0",
     "tailwindcss-animate": "1.0.7"
   },
@@ -39,6 +41,7 @@
     "@vitejs/plugin-react": "4.3.1",
     "archiver": "7.0.1",
     "autoprefixer": "10.4.19",
+    "chroma-js": "3.1.2",
     "concurrently": "8.2.2",
     "cross-env": "7.0.3",
     "eslint": "9.6.0",
@@ -56,6 +59,7 @@
     "vite": "5.3.1",
     "vite-plugin-cdn-import": "1.0.1",
     "vite-plugin-singlefile": "2.0.2",
+    "xlsx": "0.18.5",
     "yml": "1.0.0"
   },
   "resolutions": {
