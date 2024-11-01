@@ -23,7 +23,7 @@ if (!jsonData) {
 // Remove header row
 jsonData.shift();
 
-// Pick the data we needed
+// Yearly count of outbreaks
 const yearlyOutbreaksCount = jsonData.reduce((acc, data) => {
   const year = data["Year"];
 
@@ -45,6 +45,7 @@ writeFileSync(
   JSON.stringify(yearlyOutbreaksCount)
 );
 
+// Yearly country wise count of outbreaks
 const countryOutbreaks = jsonData.reduce((acc, data) => {
   const country = data["iso2"];
   const year = data["Year"];
@@ -72,7 +73,22 @@ writeFileSync(
   JSON.stringify(countryOutbreaks)
 );
 
-// get all the contries from the data
+// Get the max count of outbreaks for one contry in a year
+// const maxOutbreaks = Object.keys(countryOutbreaks).reduce((acc, year) => {
+//   const max = Math.max(
+//     ...Object.values(countryOutbreaks[year]).map(
+//       (outbreaks) => outbreaks.length
+//     )
+//   );
+
+//   acc[year] = max;
+
+//   return acc;
+// }, {});
+// console.log(maxOutbreaks);
+// Output: max is 10 at yaer 2022
+
+// Pick necessary countries geojson
 const countries = jsonData.reduce((acc, data) => {
   const country = data["iso2"];
 
