@@ -97,6 +97,7 @@ const updateYear = (year: string) => {
 const init = () => {
   reearth.viewer.overrideProperty({
     scene: {
+      mode: "2d",
       backgroundColor: "#D5DADC",
     },
     sky: {
