@@ -18,9 +18,9 @@ This is a Re:Earth Visualizer Plugin. Provide several extensions that you can us
    ![30day-map-challenge-data-hdx-ver2d](https://github.com/user-attachments/assets/db84f9e7-bef5-41d1-a595-0ff48214c639)
 
    - Use separated widgets:
-     - Year Selector Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks (MAIN)
-     - Intro Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks
-     - Credits Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks
+     - `Year Selector Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks` (MAIN)
+     - `Intro Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks`
+     - `Credits Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks`
 
    ![30day-map-challenge-data-hdx](https://github.com/user-attachments/assets/8218fcf1-e8de-4f3b-8aed-25fae1c8b845)
 
