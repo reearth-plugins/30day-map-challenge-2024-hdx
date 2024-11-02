@@ -9,13 +9,18 @@ This is a Re:Earth Visualizer Plugin. Provide several extensions that you can us
 ## How to use?
 
 1. Install plugin to Re:Earth Visualizer. You can find latest package in Release.
-2. Add widgets. There're two options each provide a different layout:
+  
+
+3. Add widgets. There're two options each provide a different layout:
 
    - Use one single widget `Global Pandemic and Epidemic-Prone Disease Outbreaks`
+      ![30day-map-challenge-data-hdx-ver1](https://github.com/user-attachments/assets/1ca82d43-2ff3-464a-a259-f18befa50b1f)
    - Use separated widgets:
      - Intro Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks
      - Credits Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks
      - Year Selector Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks
+       ![30day-map-challenge-data-hdx](https://github.com/user-attachments/assets/8218fcf1-e8de-4f3b-8aed-25fae1c8b845)
+
 
 ## Data Source
 
