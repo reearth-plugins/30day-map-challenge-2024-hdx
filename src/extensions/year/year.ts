@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import html from "@distui/diseaseoutbreaks/main/index.html?raw";
+import html from "@distui/year/main/index.html?raw";
 
 import { GlobalThis } from "@/shared/reearthTypes";
 
@@ -127,12 +127,12 @@ const init = () => {
 
   reearth.camera.flyTo(
     {
-      lat: 9.824758340209758,
-      lng: 38.75419132485593,
-      height: 6957886.532656412,
-      heading: 4.4617349024428865,
-      pitch: -1.3647860757404788,
-      roll: 1.6559079665926504,
+      lat: 4.734892647738967,
+      lng: 30.77112020081642,
+      height: 6957411.838400855,
+      heading: 4.4590626511617035,
+      pitch: -1.3646422480416387,
+      roll: 1.6586379846574149,
     },
     { duration: 0 }
   );
@@ -145,15 +145,4 @@ reearth.extension.on("message", (msg: Msg) => {
   } else if (msg.action === "updateYear") {
     updateYear(msg.payload);
   }
-});
-
-reearth.layers.on("select", () => {
-  const feature = reearth.layers.selectedFeature;
-  reearth.ui.postMessage({
-    action: "countrySelected",
-    payload: {
-      admin: feature?.properties?.admin,
-      diseases: feature?.properties?.diseases,
-    },
-  });
 });

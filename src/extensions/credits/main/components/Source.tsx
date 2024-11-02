@@ -34,6 +34,9 @@ const Source: FC = () => {
         <strong>App:</strong>{" "}
         <a className="underline" href="https://reearth.io/" target="_black">
           Re:Earth Visualizer
+        </a>{" "}
+        <a className="underline" href="https://cesium.com/" target="_black">
+          Cesium
         </a>
       </p>
     </div>

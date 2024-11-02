@@ -1,10 +1,10 @@
 id: global-pandemic-and-epidemic-prone-diseaseoutbreaks
-name: Global Pandemic- and Epidemic-Prone Disease Outbreaks
+name: Global Pandemic and Epidemic-Prone Disease Outbreaks
 version: 1.0.0
 extensions:
   - id: diseaseoutbreaks
     type: widget
-    name: Global Pandemic- and Epidemic-Prone Disease Outbreaks
+    name: Global Pandemic and Epidemic-Prone Disease Outbreaks
     widgetLayout:
       extendable:
         horizontally: true
@@ -12,12 +12,27 @@ extensions:
         zone: outer
         section: center
         area: bottom
-    schema:
-      groups:
-        - id: appearance
-          title: Appearance
-          fields:
-            - id: primary_color
-              title: Primary color
-              type: string
-              ui: color
+  - id: intro
+    type: widget
+    name: Intro Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks
+    widgetLayout:
+      defaultLocation:
+        zone: inner
+        section: left
+        area: top
+  - id: credits
+    type: widget
+    name: Credits Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks
+    widgetLayout:
+      defaultLocation:
+        zone: inner
+        section: right
+        area: bottom
+  - id: year
+    type: widget
+    name: Year Selector Panel - Global Pandemic and Epidemic-Prone Disease Outbreaks
+    widgetLayout:
+      defaultLocation:
+        zone: inner
+        section: left
+        area: bottom
