@@ -125,18 +125,6 @@ const init = () => {
       antialias: "high",
     },
   });
-
-  reearth.camera.flyTo(
-    {
-      lat: 9.824758340209758,
-      lng: 38.75419132485593,
-      height: 6957886.532656412,
-      heading: 4.4617349024428865,
-      pitch: -1.3647860757404788,
-      roll: 1.6559079665926504,
-    },
-    { duration: 0 }
-  );
 };
 
 // Get message from UI
