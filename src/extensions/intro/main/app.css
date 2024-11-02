@@ -1,11 +1,15 @@
 html,
 body {
-  width: 100%;
+  width: 560px;
   overflow: hidden;
 }
 
 :root {
   --background: "transparent"; /* Define the initial value of your CSS variable */
+}
+
+strong {
+  color: #f0617e;
 }
 
 .lato-thin {
@@ -69,5 +73,5 @@ body {
 }
 
 .color-picker {
-  color: #ff0022;
+  color: #ccd0d2;
 }

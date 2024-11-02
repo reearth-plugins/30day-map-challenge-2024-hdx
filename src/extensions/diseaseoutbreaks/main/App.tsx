@@ -9,8 +9,8 @@ function App() {
   useHooks();
 
   return (
-    <Card className="text-slate-700">
-      <div className="flex gap-2 p-4">
+    <Card className="text-slate-700 bg-[#ffffffcc]">
+      <div className="flex gap-2 p-4 max-h-[200px] box-border">
         <Intro />
         <Chart />
         <Source />

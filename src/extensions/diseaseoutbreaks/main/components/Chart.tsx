@@ -11,6 +11,8 @@ import { postMsg } from "@/shared/utils";
 
 import yearlyCount from "../../../../data/yearlyCount.json";
 
+const DISPLAY_SELCTION_SECTION = true;
+
 const chartData = Object.entries(yearlyCount).map(([year, count]) => ({
   year,
   count,
@@ -76,11 +78,11 @@ const Chart: FC = () => {
   }, []);
 
   return (
-    <div className="flex w-3/5">
-      <div className="w-3/4">
+    <div className="flex w-1/2 h-full">
+      <div className="w-3/4 h-full">
         <ChartContainer
           config={chartConfig}
-          className="min-h-[100px] w-full max-h-[200px]"
+          className="min-h-[100px] w-full max-h-[168px]"
         >
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
@@ -92,7 +94,7 @@ const Chart: FC = () => {
               fill="var(--color-year)"
               radius={4}
               activeBar={{
-                fill: "#a5b5d9",
+                fill: "#ff7691",
                 cursor: "pointer",
               }}
               onClick={handleBarClick}
@@ -109,24 +111,26 @@ const Chart: FC = () => {
           </BarChart>
         </ChartContainer>
       </div>
-      <div className="flex flex-col w-1/4 gap-4 pl-4 pr-2">
-        <div className="flex flex-col gap-1">
-          <h1 className="text-4xl">{currentYear}</h1>
-          {currentCount && (
-            <p className="text-sm">{currentCount} outbreaks in global</p>
-          )}
-        </div>
-        <div className="flex flex-col gap-1">
-          <p className="text-sm underline">{country}</p>
-          <div>
-            {diseases.map((disease) => (
-              <p className="text-xs" key={disease}>
-                {disease}
-              </p>
-            ))}
+      {DISPLAY_SELCTION_SECTION && (
+        <div className="flex flex-col w-1/4 gap-4 pl-4 pr-2">
+          <div className="flex flex-col gap-1">
+            <h1 className="text-4xl">{currentYear}</h1>
+            {currentCount && (
+              <p className="text-sm">{currentCount} outbreaks in global</p>
+            )}
+          </div>
+          <div className="flex flex-col gap-1">
+            <p className="text-sm underline">{country}</p>
+            <div className="max-h-[65px] overflow-auto">
+              {diseases.map((disease) => (
+                <p className="text-xs" key={disease}>
+                  {disease}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
